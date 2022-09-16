@@ -16,7 +16,7 @@ public static class DbService
             Abv = productInput.Abv,
             Category = productInput.Category,
             BottleSize = productInput.BottleSize,
-            CollectionDate = DateTime.Now
+            CollectionDate = DateTime.Now.Date
         };
         using SpiderDbContext dbContext = new SpiderDbContext();
         dbContext.Products.Add(product);
@@ -36,5 +36,17 @@ public static class DbService
         }
         else
             Console.WriteLine("No such record");
+    }
+    
+    public static void DeleteAllProduct()
+    {
+        //Delete records for the Products table
+        using SpiderDbContext dbContext = new SpiderDbContext();
+        IEnumerable<Product> products = dbContext.Products.ToList();
+        foreach (var product in products)
+        {
+            dbContext.Remove(product);
+            dbContext.SaveChanges();
+        }
     }
 }

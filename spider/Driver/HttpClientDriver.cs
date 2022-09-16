@@ -24,6 +24,7 @@ public class HttpClientDriver
     
     public async Task<string> ProcessRepositories()
     {
+        Console.WriteLine("@@@"+_url);
         HttpResponseMessage response = await Client.GetAsync(_url);
         response.EnsureSuccessStatusCode();
         string responseBody = await response.Content.ReadAsStringAsync();

@@ -1,10 +1,12 @@
 using System.ComponentModel.DataAnnotations;
-
 namespace spider.Model;
-
+// Once change the model for product, we should update Migrations and update the database
+// dotnet ef migrations add IniticalCreate
+// dotnet ef database update
 public class Product
 {
-    [Key]
+    [Key] 
+    public int Id { set; get; }
     public string Sku { set; get; }
     public string Name { set; get; }
     public float Price { set; get; }

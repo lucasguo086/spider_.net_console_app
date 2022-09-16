@@ -24,8 +24,11 @@ namespace spider.Migrations
 
             modelBuilder.Entity("spider.Model.Product", b =>
                 {
-                    b.Property<string>("Sku")
-                        .HasColumnType("nvarchar(450)");
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Abv")
                         .HasColumnType("nvarchar(max)");
@@ -35,6 +38,9 @@ namespace spider.Migrations
 
                     b.Property<string>("Category")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CollectionDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("ImageLink")
                         .HasColumnType("nvarchar(max)");
@@ -46,10 +52,11 @@ namespace spider.Migrations
                     b.Property<float>("Price")
                         .HasColumnType("real");
 
-                    b.Property<DateTime>("collectionDate")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("Sku")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
-                    b.HasKey("Sku");
+                    b.HasKey("Id");
 
                     b.ToTable("Products");
                 });
