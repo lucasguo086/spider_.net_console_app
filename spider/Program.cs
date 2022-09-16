@@ -17,7 +17,7 @@ static class Program
     private static readonly string AccessUrl = "https://www.jayagrocer.com/collections/alcohol/products.json";
     static async Task Main(string[] args)
     {
-        
+        DbService.DeleteAllProduct();
         int numberOfElements = 1;
         int page = 1;
         while (numberOfElements != 0)

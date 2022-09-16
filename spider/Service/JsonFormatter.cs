@@ -9,7 +9,7 @@ public static class JsonFormatter
 {
     public static void StoreJsonData(string pageSource)
     {
-        DbService.DeleteAllProduct();
+        
         JObject json = JObject.Parse(pageSource);
         //according to JSON format to organize the code
         JArray productList = JArray.Parse(json["products"].ToString());
