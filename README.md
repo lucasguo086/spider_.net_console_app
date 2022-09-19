@@ -2,9 +2,9 @@
 <p>This .net concole app (demo) collects data from eshop website (example: https://www.jayagrocer.com/collections/alcohol) and store important information into Azure SQL Server database. The main tasks of this project include</p>
 <ul>
     <li>Create an <b>Azure SQL server</b> database to host the information</li>
-    <li>Use the code-first approach of Microsoft's entity framework to create the schema of the database</li>
-    <li>Create HTTP driver to get the page source of the target website</li>
-    <li>Parse the data source into JSON format and Use the ORM method to store the data into Azure SQL Server database</li>
+    <li>Use the code-first approach of <b>Microsoft's entity framework</b> to create the schema of the database</li>
+    <li>Create <b>HTTP driver</b> to get the page source of the target website</li>
+    <li>Parse the data source into <b>JSON</b> format and Use the <b>ORM</b> method to store the data into Azure SQL Server database</li>
 </ul>
 <p>Notes:</p>
 <ul>
