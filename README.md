@@ -4,7 +4,7 @@
     <li>Create an <b>Azure SQL server</b> database to host the information</li>
     <li>Use the code-first approach of Microsoft's entity framework to create the schema of the database</li>
     <li>Create HTTP driver to get the page source of the target website</li>
-    <li>Create HTTP driver to get the page source of the target website</li>
+    <li>Parse the data source into JSON format and Use the ORM method to store the data into Azure SQL Server database</li>
 </ul>
 <p>Notes:</p>
 <ul>
