@@ -11,3 +11,5 @@
     <li>This application try to also implement Selenium driver to collect dynamic data (render by JS), still in progress</li>
     <li>This application try to collect data from source of JSON, XML and HTML, though current only implement JSON version</li>
 </ul>
+<p>Further Development:</p>
+<p>Apply Azure Devops to achieve CICD</p>
